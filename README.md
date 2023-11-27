@@ -1,1 +1,1 @@
-# bakedsdf.github.io
+# HumanNeRF-SE.github.io

@@ -7,12 +7,12 @@
 
     <title>BakedSDF</title>
 
-    <meta name="description" content="BakedSDF: Meshing Neural SDFs for Real-Time View Synthesis">
+    <meta name="description" content="HumanNeRF-SE: A Simple yet Effective Approach to Animate HumanNeRF with Diverse Poses">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <base href="/"> -->
 
-        <!--FACEBOOK-->
+        <!-- FACEBOOK
     <meta property="og:image" content="https://bakedsdf.github.io/img/breakdown_new.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="682">
@@ -20,13 +20,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bakedsdf.github.io"/>
     <meta property="og:title" content="BakedSDF" />
-    <meta property="og:description" content="Project page for BakedSDF: Meshing Neural SDFs for Real-Time View Synthesis." />
+    <meta property="og:description" content="Project page for BakedSDF: Meshing Neural SDFs for Real-Time View Synthesis." /> -->
 
         <!--TWITTER-->
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="BakedSDF" />
     <meta name="twitter:description" content="Project page for BakedSDF: Meshing Neural SDFs for Real-Time View Synthesis." />
-    <meta name="twitter:image" content="https://bakedsdf.github.io/img/breakdown_new.png"/>
+    <meta name="twitter:image" content="https://bakedsdf.github.io/img/breakdown_new.png"/> -->
 
 
 <!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
@@ -74,7 +74,7 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                BakedSDF: Meshing Neural SDFs for Real-Time View Synthesis <br>
+                HumanNeRF-SE: A Simple yet Effective Approach to Animate HumanNeRF with Diverse Poses <br>
                 <small>
                     Anonymous Authors
                 </small>
@@ -92,15 +92,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://youtu.be/fThKXZ6uDTk" target="_blank">
+                            <a href="" target="_blank">
                             <image src="img/youtube_icon.png" height="120px"></image>
-                                <h4><strong>Video</strong></h4>
+                                <h4><strong>Video(coming soon)</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="#demos">
-                            <image src="img/demos-01.png" height="120px"></image>
-                                <h4><strong>Demos</strong></h4>
+                            <a href="https://github.com/Miles629/HumanNeRF-SE">
+                            <image src="img/github.png" height="120px"></image>
+                                <h4><strong>Codes</strong></h4>
                             </a>
                         </li>
                     </ul>
@@ -116,7 +116,9 @@
                 </h3>
                 <!-- <image src="img/rays.jpg" class="img-responsive" alt="overview"><br> -->
                 <p class="text-justify">
-We present a method for reconstructing high-quality meshes of large unbounded real-world scenes suitable for photorealistic novel view synthesis. We first optimize a hybrid neural volume-surface scene representation designed to have well-behaved level sets that correspond to surfaces in the scene. We then bake this representation into a high-quality triangle mesh, which we equip with a simple and fast view-dependent appearance model based on spherical Gaussians. Finally, we optimize this baked representation to best reproduce the captured viewpoints, resulting in a model that can leverage accelerated polygon rasterization pipelines for real-time view synthesis on commodity hardware. Our approach outperforms previous scene representations for real-time rendering in terms of accuracy, speed, and power consumption, and produces high quality meshes that enable applications such as appearance editing and physical simulation.
+                    We present HumanNeRF-SE, which can synthesize diverse novel pose images with simple input. Previous HumanNeRF studies require large neural networks to fit the human appearance and prior knowledge. Subsequent methods build upon this approach with some improvements. Instead, we reconstruct this approach, combining explicit and implicit human representations with both general and specific mapping processes.
+
+                    Our key insight is that explicit shape can filter the information used to fit implicit representation, and frozen general mapping combined with point-specific mapping can effectively avoid overfitting and improve pose generalization performance.Our explicit and implicit human represent combination architecture is extremely effective. This is reflected in our model's ability to synthesize images under arbitrary poses with few-shot input and increase the speed of synthesizing images by 15 times through a reduction in computational complexity without using any existing acceleration modules. Compared to the state-of-the-art HumanNeRF studies, HumanNeRF-SE achieves better performance with fewer learnable parameters and less training time (see Figure 1).
                 </p>
             </div>
         </div>
@@ -128,8 +130,8 @@ We present a method for reconstructing high-quality meshes of large unbounded re
                     Video
                 </h3>
                 <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://www.youtube.com/embed/fThKXZ6uDTk" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    <div style="position:relative;padding-top:70%;">
+                        <iframe src="img/suppl-video.mp4" allowfullscreen style="position:absolute;top:0;left:0;width:120%;height:100%;"></iframe>
                     </div>
                 </div>
             </div>
@@ -139,11 +141,11 @@ We present a method for reconstructing high-quality meshes of large unbounded re
         <div class="row">
             <div class="col-md-8 col-md-offset-2" id="demos">
                 <h3>
-                    Real-Time Interactive Viewer Demos
+                    Structure
                 </h3>
-                <h4>
+                <!-- <h4>
                     Real Captured Scenes
-                </h4>
+                </h4> -->
             </div>
         </div>
 
@@ -151,12 +153,12 @@ We present a method for reconstructing high-quality meshes of large unbounded re
                 <div class="col-md-4 col-md-offset-2 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="https://bakedsdf.github.io/viewer/index.html?scene=https://dl.dropboxusercontent.com/s/7srlfofbiryehn6/gardenvase.glb" target="_blank">
-                            <image src="img/gardenvase.png" width="160px"></image>
-                                <h4><strong>Gardenvase</strong></h4>
+                            <!-- <a href="https://bakedsdf.github.io/viewer/index.html?scene=https://dl.dropboxusercontent.com/s/7srlfofbiryehn6/gardenvase.glb" target="_blank"> -->
+                            <image src="img/method18.png" width="800px"></image>
+                                <p><strong>Framework of HumanNeRF-SE.</strong>(a) We first voxelize the observation space as a voxel volume V . For a voxel containing vertices, the value will be the number of vertices (as one occupancy channel) and the corresponding SMPL weight. (b) We performed channel-by-channel convolution on the volume. All sampling points are queried in the convolutional volume to get their spatial-aware features. Those points with zero occupancy will be filtered out. (c) We query the nearest weight of the remained points in the volume, which is used for rigid deformation. Spatial-aware features are utilized in the neural network to correct the rigid results and obtain the final point coordinates in the canonical space. (d) The sampling points in the canonical space obtain their colors and densities through the NeRF network. The densities of filtered points are forced to be zero.<p>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="https://bakedsdf.github.io/viewer/index.html?scene=https://dl.dropboxusercontent.com/s/3ss5rc56bg0s9k5/bicycle.glb" target="_blank">
                             <image src="img/bicycle.png" width="160px"></image>
                                 <h4><strong>Bicycle</strong></h4>
@@ -205,14 +207,14 @@ We present a method for reconstructing high-quality meshes of large unbounded re
                             <image src="img/flowertreehill.png" width="160px"></image>
                                 <h4 ><strong>Treehill & Flower </strong></h4>
 							</a>
-						</li>
+						</li> -->
                     </ul>
                 </div>
         </div>
 	
 
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     BakedSDF
@@ -246,7 +248,7 @@ We present a method for reconstructing high-quality meshes of large unbounded re
                     <img src="img/final.014.jpg" alt="Rendering" />
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
