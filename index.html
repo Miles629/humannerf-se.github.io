@@ -165,7 +165,7 @@
                 </h3>
                 <div class="text-justify">
                     <div style="position:relative;padding-top:50%;">
-                        <image src="img/method18.png" allowfullscreen style="position:absolute;top:0;left:0;width:100%;"></image>
+                        <image src="img/method_page.png" allowfullscreen style="position:absolute;top:0;left:0;width:100%;"></image>
                         <p><strong>Framework of HumanNeRF-SE.</strong>(a) We first voxelize the observation space as a voxel volume V . For a voxel containing vertices, the value will be the number of vertices (as one occupancy channel) and the corresponding SMPL weight. (b) We performed channel-by-channel convolution on the volume. All sampling points are queried in the convolutional volume to get their spatial-aware features. Those points with zero occupancy will be filtered out. (c) We query the nearest weight of the remained points in the volume, which is used for rigid deformation. Spatial-aware features are utilized in the neural network to correct the rigid results and obtain the final point coordinates in the canonical space. (d) The sampling points in the canonical space obtain their colors and densities through the NeRF network. The densities of filtered points are forced to be zero.</p>
                     </div>
                 </div>
