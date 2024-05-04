@@ -118,17 +118,16 @@
                     Teaser
                 </h3>
                 <div style="position:relative;padding-top:30%;">
-                <image src="img/teaser24.png" allowfullscreen style="position:absolute;top:0;left:0;width:100%;"></image>
+                <image src="img/teaser-final.png" allowfullscreen style="position:absolute;top:0;left:0;width:100%;"></image>
                 </div>
-                <strong>Overview.</strong> We synthesize images of performers in diverse poses in a simple yet effective way. (a) Novel Pose: In order to test the ability of synthesizing images of diverse poses, we input a simple action video and animate it with novel poses. (b) Few Shot: Furthermore, to test the ability to avoid overfitting, we use only few input to generalize novel pose images. (c) Compared to similar methods, HumanNeRF-SE uses less than 1% of learnable parameters, 1/20 training time, and achieves better results in few-shot experiments. †LPIPS = 1,000×LPIPS. 
+                HumanNeRF-SE efficiently synthesizes images of performers in diverse poses, blending simplicity with effectiveness. It outperforms previous methods by creating a wider range of new poses (a), maintains generalization without overfitting with limited input frames (b), and requires fewer than 1% of learnable parameters, reducing training time by 95% while delivering superior results in the few-shot scenario (c).
+                LPIPS = 1,000XLPIPS.
                 <h3>
                     Abstract
                 </h3>
                 <!-- <image src="img/rays.jpg" class="img-responsive" alt="overview"><br> -->
                 <p class="text-justify">
-                    We present HumanNeRF-SE, which can synthesize diverse novel pose images with simple input. Previous HumanNeRF studies require large neural networks to fit the human appearance and prior knowledge. Subsequent methods build upon this approach with some improvements. Instead, we reconstruct this approach, combining explicit and implicit human representations with both general and specific mapping processes.
-
-                    Our key insight is that explicit shape can filter the information used to fit implicit representation, and frozen general mapping combined with point-specific mapping can effectively avoid overfitting and improve pose generalization performance.Our explicit and implicit human represent combination architecture is extremely effective. This is reflected in our model's ability to synthesize images under arbitrary poses with few-shot input and increase the speed of synthesizing images by 15 times through a reduction in computational complexity without using any existing acceleration modules. Compared to the state-of-the-art HumanNeRF studies, HumanNeRF-SE achieves better performance with fewer learnable parameters and less training time (see Figure 1).
+                    We present HumanNeRF-SE, a simple yet effective method that synthesizes diverse novel pose images with simple input. Previous HumanNeRF works require a large number of optimizable parameters to fit the human images.  Instead, we reload these approaches by combining explicit and implicit human representations to design both generalized rigid deformation and specific non-rigid deformation. Our key insight is that explicit shape can reduce the sampling points used to fit implicit representation, and frozen blending weights from SMPL constructing a generalized rigid deformation can effectively avoid overfitting and improve pose generalization performance. Our architecture involving both explicit and implicit representation is simple yet effective.  Experiments demonstrate our model can synthesize images under arbitrary poses with few-shot input and increase the speed of synthesizing images by 15 times through a reduction in computational complexity without using any existing acceleration modules. Compared to the state-of-the-art HumanNeRF studies, HumanNeRF-SE achieves better performance with fewer learnable parameters and less training time.
                 </p>
             </div>
         </div>
@@ -166,8 +165,8 @@
                 </h3>
                 <div class="text-justify">
                     <div style="position:relative;padding-top:50%;">
-                        <image src="img/method_page.png" allowfullscreen style="position:absolute;top:0;left:0;width:100%;"></image>
-                        <p><strong>Framework of HumanNeRF-SE.</strong>(a) We first voxelize the observation space as a voxel volume V . For a voxel containing vertices, the value will be the number of vertices (as one occupancy channel) and the corresponding SMPL weight. (b) We performed channel-by-channel convolution on the volume. All sampling points are queried in the convolutional volume to get their spatial-aware features. Those points with zero occupancy will be filtered out. (c) We query the nearest weight of the remained points in the volume, which is used for rigid deformation. Spatial-aware features are utilized in the neural network to correct the rigid results and obtain the final point coordinates in the canonical space. (d) The sampling points in the canonical space obtain their colors and densities through the NeRF network. The densities of filtered points are forced to be zero.</p>
+                        <image src="img/method22.png" allowfullscreen style="position:absolute;top:0;left:0;width:100%;"></image>
+                        <p><strong>Framework of HumanNeRF-SE.</strong>(a) We first voxelize the observation space as a voxel volume $\mathbf{V}$. For a voxel containing vertices, the value will be the number of vertices (as one occupancy channel) and the corresponding SMPL weight. (b) We performed channel-by-channel convolution on the volume. All sampling points are queried in the convolutional volume to get their spatial-aware features. Those points with zero occupancy will be filtered out. (c) We query the nearest weight of the remained points in the volume, which is used for rigid deformation. Spatial-aware features are utilized in the neural network to correct the rigid results and obtain the final point coordinates in the canonical space. The sampling points in the canonical space obtain their colors and densities through the NeRF network. The densities of filtered points are forced to be zero.</p>
                     </div>
                 </div>
                 <!-- <h4>
